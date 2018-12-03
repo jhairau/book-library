@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <span>Add Book</span>
+</mat-toolbar>
+
+<div class="page-content">
+  <form [formGroup]="form" novalidate>
+    <mat-card>
+      <app-book-new formControlName="book"></app-book-new>
+      <mat-card-footer>
+        <button
+          mat-flat-button
+          color="primary"
+          [disabled]="!form.valid || form.pristine"
+          (click)="addBook()"
+        >Add
+        </button>
+      </mat-card-footer>
+    </mat-card>
+  </form>
+
+
+</div>
+

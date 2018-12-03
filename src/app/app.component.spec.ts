@@ -10,6 +10,9 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import {RouterModule} from '@angular/router';
+import {RouterTestingModule} from '@angular/router/testing';
+import {MaterialModule} from './material.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -21,11 +24,8 @@ describe('AppComponent', () => {
       imports: [
         NoopAnimationsModule,
         LayoutModule,
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
+        MaterialModule,
+        RouterTestingModule
       ]
     }).compileComponents();
   }));

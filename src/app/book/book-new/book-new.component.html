@@ -1,0 +1,30 @@
+<form [formGroup]="form" novalidate>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput placeholder="Title" maxlength="30">
+      <mat-hint align="end">{{form.value.title.length}} / 30</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category" placeholder="Category">
+        <mat-option value="drama">Drama</mat-option>
+        <mat-option value="comedy">Comedy</mat-option>
+        <mat-option value="sport">Sport</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10"
+        formControlName="description"
+        matInput
+        placeholder="Description"
+      ></textarea>
+      <mat-hint align="start">(Textarea has cdkTextareaAutosize)</mat-hint>
+    </mat-form-field>
+</form>

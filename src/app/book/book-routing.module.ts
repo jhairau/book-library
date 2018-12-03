@@ -1,10 +1,11 @@
-import {NgModule} from "@angular/core";
-import {Routes, RouterModule} from "@angular/router";
-import {BookPageComponent} from "./book-page/book-page.component";
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {BookNewPageComponent} from './book-new-page/book-new-page.component';
+import {BookListPageComponent} from './book-list-page/book-list-page.component';
 
 const routes: Routes = [
-  {path: "new", component: BookPageComponent},
-  {path: "", component: BookPageComponent}
+  {path: 'new', component: BookNewPageComponent},
+  {path: 'list', component: BookListPageComponent}
 ];
 
 @NgModule({

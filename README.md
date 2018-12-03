@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Structure
+Even though the app has a single feature (Book) it has been built out in a module/modular pattern where features
+exist under their own modules. Each module is responsible for its routing and state. Top level state is added to 
+`src/app/app-routing.module.ts` to instruct our core app to use the lazy loaded features

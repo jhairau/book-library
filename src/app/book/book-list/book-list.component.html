@@ -1,0 +1,4 @@
+<mat-card *ngFor="let book of books$ | async">
+  <mat-card-title>Title: {{book.title}} ({{book.category | titlecase}})</mat-card-title>
+  <mat-card-content>Description: {{book.description}}</mat-card-content>
+</mat-card>

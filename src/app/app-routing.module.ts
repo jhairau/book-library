@@ -1,7 +1,7 @@
-import {NgModule} from "@angular/core";
-import {Routes, RouterModule} from "@angular/router";
-import {StoreRouterConnectingModule, routerReducer} from "@ngrx/router-store";
-import {StoreModule} from "@ngrx/store";
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {StoreRouterConnectingModule, routerReducer} from '@ngrx/router-store';
+import {StoreModule} from '@ngrx/store';
 
 
 const routes: Routes = [

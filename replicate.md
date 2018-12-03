@@ -44,3 +44,8 @@ There doesn't appear to be any schematics for NgRx routing at time of writing th
 ```
 $ npm install @ngrx/router-store --save
 ```
+
+## Service Worker 
+```
+$ ng add @angular/pwa --project book-library
+```

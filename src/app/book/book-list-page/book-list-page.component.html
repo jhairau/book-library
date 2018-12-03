@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span>Book List ({{total$ | async}})</span>
+</mat-toolbar>
+
+<div class="page-content">
+  <app-book-list [books$]="books$"></app-book-list>
+</div>
+
