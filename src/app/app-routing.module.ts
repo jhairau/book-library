@@ -1,10 +1,31 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from "@angular/core";
+import {Routes, RouterModule} from "@angular/router";
+import {StoreRouterConnectingModule, routerReducer} from "@ngrx/router-store";
+import {StoreModule} from "@ngrx/store";
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {
+    path: 'books',
+    loadChildren: '../app/book/book.module#BookModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    StoreModule.forRoot({
+      router: routerReducer,
+    }),
+    RouterModule.forRoot(routes),
+    // Connects RouterModule with StoreModule
+    StoreRouterConnectingModule.forRoot(),
+  ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
