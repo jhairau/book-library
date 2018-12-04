@@ -6,11 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
+    "build:prod:stats": "ng build --prod --stats-json --source-map --progress",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "start-storybook -p 9001 -c .storybook"
+    "storybook:build": "start-storybook -p 9001 -c .storybook",
+    "publish:pages": "ng build --prod --base-href \"https://jhairau.github.io/book-library/\" && ./node_modules/.bin/ngh --dir=dist/book-library",
+    "stats": "webpack-bundle-analyzer dist/book-library/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -68,8 +71,10 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
+    "source-map-explorer": "^1.6.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "webpack-bundle-analyzer": "^3.0.3"
   }
 }
