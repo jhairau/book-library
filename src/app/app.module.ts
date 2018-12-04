@@ -9,9 +9,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -24,12 +24,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([AppEffects]),
-    BrowserAnimationsModule,
+    NoopAnimationsModule,
     LayoutModule,
     MatToolbarModule,
-    MatButtonModule,
     MatSidenavModule,
-    MatIconModule,
     MatListModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
