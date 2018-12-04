@@ -21,7 +21,7 @@ const routes: Routes = [
     StoreModule.forRoot({
       router: routerReducer,
     }),
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {useHash: true}),
     // Connects RouterModule with StoreModule
     StoreRouterConnectingModule.forRoot(),
   ],
