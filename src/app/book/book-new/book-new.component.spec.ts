@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookNewComponent } from './book-new.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MaterialModule} from '../../material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('BookNewComponent', () => {
   let component: BookNewComponent;
@@ -8,6 +11,12 @@ describe('BookNewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        BrowserAnimationsModule,
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule
+      ],
       declarations: [ BookNewComponent ]
     })
     .compileComponents();

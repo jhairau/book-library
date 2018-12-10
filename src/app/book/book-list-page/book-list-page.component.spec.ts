@@ -1,18 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BookListPageComponent } from './book-list-page.component';
-import { Store, StoreModule } from '@ngrx/store';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {BookListPageComponent} from './book-list-page.component';
+import {Store, StoreModule} from '@ngrx/store';
 import {MaterialModule} from '../../material.module';
+import {BookListComponent} from '../book-list/book-list.component';
+import {CommonModule} from '@angular/common';
 
 describe('BookListPageComponent', () => {
   let component: BookListPageComponent;
   let fixture: ComponentFixture<BookListPageComponent>;
   let store: Store<any>;
 
-  beforeEach(async() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-      imports: [ StoreModule.forRoot({}), MaterialModule ],
-      declarations: [ BookListPageComponent ]
+      imports: [StoreModule.forRoot({}), MaterialModule, CommonModule],
+      declarations: [BookListPageComponent, BookListComponent],
+      providers: [{
+        provide: Store,
+        useValue: {
+          dispatch: () => {},
+          pipe: () => {}
+        }
+      }]
     });
 
     await TestBed.compileComponents();

@@ -18,7 +18,7 @@ describe('Book Reducer', () => {
       const book: Book = {
         id: 'abc123',
         title: 'TITLE',
-        category: 'CATEGORY',
+        category: 'comedy',
         description: 'DESCRIPTION'
       };
 

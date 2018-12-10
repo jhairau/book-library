@@ -5,6 +5,7 @@ import { Store, StoreModule } from '@ngrx/store';
 import {MaterialModule} from '../../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BookNewComponent} from '../book-new/book-new.component';
 
 describe('BookNewPageComponent', () => {
   let component: BookNewPageComponent;
@@ -20,7 +21,7 @@ describe('BookNewPageComponent', () => {
         FormsModule,
         ReactiveFormsModule
       ],
-      declarations: [ BookNewPageComponent ]
+      declarations: [ BookNewPageComponent, BookNewComponent ]
     });
 
     await TestBed.compileComponents();
