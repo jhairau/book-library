@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "start-storybook -p 9001 -c .storybook",
-    "publish:pages": "ng build --prod --base-href \"https://jhairau.github.io/book-library/\" && ./node_modules/.bin/ngh --dir=dist/book-library",
+    "github:pages:build": "ng build --prod --base-href \"https://jhairau.github.io/book-library/\"",
+    "github:pages:deploy": "./node_modules/.bin/ngh --dir=dist/book-library",
     "stats": "webpack-bundle-analyzer dist/book-library/stats.json"
   },
   "private": true,
