@@ -4,8 +4,6 @@ import {CommonModule} from '@angular/common';
 import {BookRoutingModule} from './book-routing.module';
 import {StoreModule} from '@ngrx/store';
 import * as fromBook from './store/reducers/book.reducer';
-import {EffectsModule} from '@ngrx/effects';
-import {BookEffects} from './store/effects/book.effects';
 import {BookNewPageComponent} from './book-new-page/book-new-page.component';
 import {
   MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule, MatToolbarModule
@@ -29,8 +27,7 @@ import {BookListComponent} from './book-list/book-list.component';
     MatSelectModule,
     CommonModule,
     BookRoutingModule,
-    StoreModule.forFeature('book', fromBook.reducer),
-    EffectsModule.forFeature([BookEffects])
+    StoreModule.forFeature('book', fromBook.reducer)
   ]
 })
 export class BookModule {
